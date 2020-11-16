@@ -19,7 +19,7 @@ void main()
 	fragNor = (M * vec4(vertNor, 0.0)).xyz;
 
 	//initial setup.
-	vec4 WPos = (M * vertPos);
+	vec4 WPos = (M * V * vertPos);
 	l = normalize(light_source - WPos.xyz);
 
 	//all to get h.

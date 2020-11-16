@@ -32,7 +32,7 @@ using namespace glm;
 
 //lighting movement.
 float mov_light = 0;
-vec3 light_pos = vec3(0, 100, 0);
+vec3 light_pos = vec3(0, 200, 0);
 
 //sky.
 unsigned int sky;
@@ -82,7 +82,7 @@ public:
 	vec3 gMin;
 
 	//camera.
-	vec3 eye = vec3(0, 0, 0);
+	vec3 eye = vec3(0, 20, 0);
 	vec3 center;
 	vec3 up = vec3(0, 1, 0);
 	vec3 forward;
@@ -431,7 +431,6 @@ public:
 		}
 	}
 
-
 	void render(GLFWwindow* window) {
 		// Get current frame buffer size.
 		int width, height;
@@ -508,8 +507,8 @@ public:
 
 					setModel(progTex, Model);
 					SetMaterial(3, progTex);
-					glUniform1f(progTex->getUniform("Invert"), 1);
 					glUniform3f(progTex->getUniform("eye"), eye.x, eye.y, eye.z);
+					glUniform1f(progTex->getUniform("Invert"), 1);
 					for (int i = 0; i < mesh_list2.size(); i++)
 					{
 						if (i == 1 ||
@@ -521,11 +520,13 @@ public:
 						i == 7 ||
 						i == 8)
 						{
+							//SetMaterial(4);
 							texture2->bind(progTex->getUniform("Texture0"));
 							mesh_list2[i]->draw(progTex);
 						}
 						else
 						{
+							//SetMaterial(1);
 							texture3->bind(progTex->getUniform("Texture0"));
 							mesh_list2[i]->draw(progTex);
 						}
@@ -560,8 +561,8 @@ public:
 
 					setModel(progTex, Model);
 					SetMaterial(3, progTex);
-					glUniform1f(progTex->getUniform("Invert"), 1);
 					glUniform3f(progTex->getUniform("eye"), eye.x, eye.y, eye.z);
+					glUniform1f(progTex->getUniform("Invert"), 1);
 					for (int i = 0; i < mesh_list2.size(); i++)
 					{
 						if (i == 1 ||
@@ -573,13 +574,11 @@ public:
 							i == 7 ||
 							i == 8)
 						{
-							//SetMaterial(4);
 							texture3->bind(progTex->getUniform("Texture0"));
 							mesh_list2[i]->draw(progTex);
 						}
 						else
 						{
-							//SetMaterial(1);
 							texture0->bind(progTex->getUniform("Texture0"));
 							mesh_list2[i]->draw(progTex);
 						}
@@ -637,10 +636,11 @@ public:
 					Model->translate(vec3(40, 20, 0));
 					Model->rotate(90, vec3(0, 1, 0));
 					Model->scale(vec3(5, 5, 5));
+
 					setModel(progTex, Model);
 					SetMaterial(3, progTex);
-					glUniform1f(progTex->getUniform("Invert"), 1);
 					glUniform3f(progTex->getUniform("eye"), eye.x, eye.y, eye.z);
+					glUniform1f(progTex->getUniform("Invert"), 1);
 					texture0->bind(progTex->getUniform("Texture0"));
 					for (int i = 0; i < mesh_list3.size(); i++)
 					{
@@ -667,10 +667,11 @@ public:
 				Model->pushMatrix();
 					Model->translate(vec3(0, 20, 40));
 					Model->scale(vec3(5, 5, 5));
+
 					setModel(progTex, Model);
 					SetMaterial(4, progTex);
-					glUniform1f(progTex->getUniform("Invert"), 1);
 					glUniform3f(progTex->getUniform("eye"), eye.x, eye.y, eye.z);
+					glUniform1f(progTex->getUniform("Invert"), 1);
 					texture4->bind(progTex->getUniform("Texture0"));
 					for (int i = 0; i < mesh_list3.size(); i++)
 					{

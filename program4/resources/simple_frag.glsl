@@ -26,7 +26,7 @@ void main()
 	vec3 spec = MatSpec * pow(max(0, dot(normal,h)), shine) * light_color;
 
 	//reflective color.
-	vec3 rc = diff + spec + amb;
+	vec3 rc = diff + amb;
 
 	color = vec4(rc, 1.0); //return color.
 }
