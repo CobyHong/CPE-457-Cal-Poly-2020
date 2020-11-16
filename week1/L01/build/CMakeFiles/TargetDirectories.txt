@@ -1,0 +1,3 @@
+C:/Users/john/Desktop/CPE-471/week1/L01/build/CMakeFiles/Lab01.dir
+C:/Users/john/Desktop/CPE-471/week1/L01/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/john/Desktop/CPE-471/week1/L01/build/CMakeFiles/ZERO_CHECK.dir

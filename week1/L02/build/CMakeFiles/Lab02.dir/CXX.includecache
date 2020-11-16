@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+//home/cohong/471/week1/L02/src/Image.h
+string
+-
+vector
+-
+
+//home/cohong/471/week1/L02/src/main.cpp
+iostream
+-
+string
+-
+vector
+-
+memory
+-
+Image.h
+//home/cohong/471/week1/L02/src/Image.h
+

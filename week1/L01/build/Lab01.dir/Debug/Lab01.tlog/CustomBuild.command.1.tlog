@@ -1,0 +1,10 @@
+^C:\USERS\JOHN\DESKTOP\CPE-471\WEEK1\L01\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/john/Desktop/CPE-471/week1/L01 -BC:/Users/john/Desktop/CPE-471/week1/L01/build --check-stamp-file C:/Users/john/Desktop/CPE-471/week1/L01/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
