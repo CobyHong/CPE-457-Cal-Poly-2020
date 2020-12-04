@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CPE-471 Coby Hong</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">Bad Driver <span>by Coby Hong</span><span>CPE 471 - Fall 2020</span></a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="images/pic02.jpg" alt="" />
+						</div>
+						<header class="special">
+							<h2>About The Program</h2>
+						</header>
+						<div class="content">
+                           
+                            <p>I wanted to make a simple car driving simulation that followed some point-based system. I later decided to implement the particle system in what I believe to be an ingenious way involving crashing the vehicle. This would lead to the goal of the game to be trying to hit all four buildings, which in terms lights them on fire to earn the worse driver award. I believe I gotta the basics of what is need for a simple driving simulation. I was mainly keen on the driving experience and collison interactions for this project.</p>
+                            <div class="6u 12u$(small)">
+                                <h3>Computer Graphic Technologies</h3>
+                                <ul>
+                                    <li>Blinn-Phong Shading (Texture & Non-Texture).</li>
+                                    <li>First-Person Fly-By Camera.</li>
+                                    <li>Texturing (Skybox, Vehicle).</li>
+                                    <li>Bounding Box Collision Detection (All Objects).</li>
+                                    <li>Particle System (Fire effect).</li>
+                                    <li>Basic Vehicle Velocity / Acceleration Physics</li>
+                                    <li>Basic Vehicle Driving Controls</li>
+                                </ul>
+                            </div>
+                            <div class="6u 12u$(small)">
+                                <h3>Program Controls</h3>
+                                <ul>
+                                    <li>First-Person Fly-By Camera - WASD & Mouse.</li>
+                                    <li>Car Movement - Arrow Keys.</li>
+                                    <li>ESC - Quit.</li>
+                                </ul>
+                            </div>
+                            <div class="6u 12u$(small)">
+                                <h3>Reference and Info Links</h3>
+                                <ul>
+                                    <li>AABB to AABB collision information: <a href="http://www.miguelcasillas.com/?p=30">Click here!</a></li>
+                                    <li>Moving objects based on orientation: <a href="https://stackoverflow.com/questions/13482160/how-to-move-an-object-around-a-3d-environment-in-the-direction-it-is-facing-in-c">Click here!</a></li>
+                                    <li>Website template used: <a href="https://templated.co/caminar">Click here!</a></li>
+                                </ul>
+                            </div>
+                            <h3>Video Demonstration</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1QP2UsFtp7I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+
+				<!-- two -->
+					<section id="two" class="wrapper">
+						<div class="spotlight alt">
+							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Collision Detection</h3>
+								<p>To achieve collision detection, I created a bounding box around the objects using the min and max values acquired from the shape class type. I constructed arrays to contain these values and used a function to simulate the intersection of the two bounding boxes. This function simply returning a boolean if the boxes intersected. An intersection would lead to an opposing multiplier onto the current vehicle's acceleration, simulating getting bounced away. This method is called AABB to AABB</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
+							<div  class="inner">
+								<h3>Car Movement</h3>
+								<p>Car controls were kept quite simple. I used a global variable for rotation that would change when the left and right arrow keys were pressed. Model translation to get the vehicle moving in the direction it is facing was done with some simple trigonometry. The vehicle has an acceleration factor which increases when the up and down keys are pressed. Constant negative acceleration is placed on which current acceleration is occuring until reaching zero. When at zero acceleration, The user cannot steer the vehicle simulating real-world driving mechanics. So in short, the vehicle speeds up when holding the acceleration arros (up and down) and will slow down to a stop if you don't. Car having inability to steer unless moving and finally collisions affect this acceleration as well.</p>
+							</div>
+						</div>
+						<div class="spotlight alt">
+							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Implementing previous projects' functionalities</h3>
+								<p>I reused the camera mechanics from lab 7 for my first-person fly-by camera. I just wanted to include this to let people look around the world. The particle system from lab 9 has been used to act as fire. When the vehicle hits one of the buildings, the house changes to a red color and red particles / fire is activated. This represents the driver lighting the house on fire due to crashing into it. I as well included a skybox to further emphasize the night theme of the game / program.</p>
+							</div>
+						</div>
+                    </section>
+                    
+
+                    <!-- Three -->
+					<section id="three" class="wrapper style">
+						<header class="special">
+							<h2>Additional Photos</h2>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+            </section>
+            
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+				    Coby Hong | Fall 2020 | CPE 471 | Zoe Wood
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
